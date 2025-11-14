@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--Codice di lingua iso-->
+<html lang="it">
+<html>
+    <!--Elemento head è il contenitore per i metadati -->
+    <head>
+        <!--Set per visualizzazione dei caratteri-->
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="stile/style.css">
+        <!--Area visibele all'utente, ridimensionamento in base al dispositivo-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crea la tua Tavola</title>
+        <!--font usati, licenze adobe-->
+        <link rel="stylesheet" href="https://use.typekit.net/xhx7ggb.css">
+        <link rel="stylesheet" href="https://use.typekit.net/xhx7ggb.css">
+        <!--Dublin Core metadati-->
+        <meta name="DC.Title" content="Atlante Relazionale">
+        <meta name="DC.Creator" content="Francesca Brevini">
+        <meta name="DC.Subject" content="Arte contemporanea, Psicogeografia, Archivio, Atlante visivo">
+        <meta name="DC.Description" content="Atlante digitale per esplorare derive psicogeografiche nell’arte contemporanea.">
+        <meta name="DC.Date" content="2025">
+        <meta name="DC.Type" content="Sito web">
+        <meta name="DC.Format" content="html"> 
+        <!--ricordare di inserire-->
+        <meta name="DC.Identifier" content="TBD una volta che il sito sia caricato">
+        <meta name="DC.language" content="it">
+        <meta name="DC.Rights" content="Accesso libero creative commons">
+        <style>
+         /* Base*/
+         #lista-nodi, #tavola-selezionata { list-style: none; padding: 2vw; max-width: 400px; margin: 2vw 2vw 2vw 2vw; }
+         #lista-nodi li, #tavola-selezionata li { padding: 8px; border: 1px solid #ccc; margin-bottom: 5px; display: flex; justify-content: space-between; }
+         button { cursor: pointer; }
+  </style>
+        </head>
+    <body>
+        <!--Elemento Nav per il menu di navigazione -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="teoria.html">Manifesto</a></li>
+                <li><a href="atlante.html">Costellazioni</a></li>
+                <li><a href="crea-tavola.html" class="pagina-attiva">Crea la tua tavola</a></li>
+                <li><a href="ricerca.html">Struttura e standard</a></li>
+            </ul>
+        </nav>
+        <!--Elemento header per la testa della pagina -->
+        <header class="intestazioni">
+            <div>
+            <h1><strong>Crea la tua Tavola  | Atlante Relazionale</strong></h1>
+            <p>Componi percorsi e connessioni personali nella tua tavola critica.</p>
+            </div>
+        </header>
+        <main>
+            <section class="griglia-layout">
+                <section>
+                <h2>Costruzione della tavola</h2>
+                   <p>Descrizione del processo, strumenti disponibili, guide per l’uso.</p>
+                   <ul id="lista-nodi"></ul>
+                </section>
+                <section>
+                <h2>Selezione dei nodi</h2>
+                   <p>Come scegliere e intrecciare significati tra opere.</p>
+                   <ul id="tavola-selezionata"></ul>
+                </section>
+                <section>
+                <h2>Salvataggio e condivisione</h2>
+                   <p>Funzionalità per conservare e condividere le proprie derive.</p>
+                   <button id="salva-tavola">Salva la tua tavola</button>
+                </section>
+            </section>
+        </main>
+        <div class="crediti">
+                <p><a href="#"><strong>Crediti</strong></a>  |  <a href="#" ><strong>Licenze</strong></a></p>
+        </div>
+        <!--Elemento footer per il piede della pagina -->
+        <footer>
+            <p>&copy; Copyright Francesca Brevini, 2025 - Progetto sviluppato per la prova finale del corso di Digital Humanities e Patrimonio Culturale </p>
+        </footer>
+   
+
+<script>
+  // array di nodi in JS 
+  const nodiCatalogo = [
+    {id: '1', titolo: 'Nodo 1 - Categoria A'},
+    {id: '2', titolo: 'Nodo 2 - Categoria B'},
+    {id: '3', titolo: 'Nodo 3 - Categoria A'},
+    {id: '4', titolo: 'Nodo 4 - Categoria C'}
+  ];
+
+  const listaNodi = document.getElementById('lista-nodi');
+  const tavolaSelezionata = document.getElementById('tavola-selezionata');
+
+  // lista nodi dinamici
+  nodiCatalogo.forEach(nodo => {
+    const li = document.createElement('li');
+    li.textContent = nodo.titolo;
+
+    const btn = document.createElement('button');
+    btn.textContent = '+ Aggiungi';
+    btn.addEventListener('click', () => {
+      // Evito duplicati nella tavola
+      if (!tavolaSelezionata.querySelector(`li[data-id="${nodo.id}"]`)) {
+        const liTavola = document.createElement('li');
+        liTavola.textContent = nodo.titolo;
+        liTavola.dataset.id = nodo.id;
+
+        const btnRimuovi = document.createElement('button');
+        btnRimuovi.textContent = 'Rimuovi';
+        btnRimuovi.addEventListener('click', () => liTavola.remove());
+
+        liTavola.appendChild(btnRimuovi);
+        tavolaSelezionata.appendChild(liTavola);
+      }
+    });
+
+    li.appendChild(btn);
+    listaNodi.appendChild(li);
+  });
+
+  // Salvataggio in JSON scaricabile
+  document.getElementById('salva-tavola').addEventListener('click', () => {
+    const dati = [];
+    tavolaSelezionata.querySelectorAll('li').forEach(item => {
+      dati.push({id: item.dataset.id, titolo: item.firstChild.textContent.trim()});
+    });
+    const jsonStr = JSON.stringify(dati, null, 2);
+    const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(jsonStr);
+    const exportFileDefaultName = 'tavola.json';
+
+    const linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement.click();
+  });
+  </script>
+    </body>
+</html>
