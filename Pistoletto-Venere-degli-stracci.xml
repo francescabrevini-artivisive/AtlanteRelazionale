@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo xmlns="http://purl.org/dc/elements/1.1/">
+	<opera n="1">
+		<Titolo>Venere degli stracci</Titolo>
+		<tipo>Installazione</tipo>
+		<autori>
+		    <autore n="1">Pistoletto, Michelangelo</autore>
+		</autori>
+		<data>1967</data>
+		<accesso>https://www.madrenapoli.it/collezione/michelangelo-pistoletto/</accesso>
+            <licenza> Uso didattico (i diritti appartengono al MADRE – Museo d'Arte Contemporanea Donnaregina, Napoli)</licenza>
+            <formati> Statua in gesso; cumulo di stracci; installazione ambientale</formati>
+            <analisi>La “Venere degli stracci” mette in scena la collisione tra il passato e il presente: la Venere statua classica, simbolo della bellezza idealizzata, è accostata a un mucchio di tessuti usati. La sopravvivenza della forma antica si confronta con la materia disordinata e povera della sovrapproduzione capitalistica.
+            
+            In chiave situazionista, l’opera realizza un détournement: la Venere viene sottratta al regime dello spettacolo per essere immersa nella realtà materiale del contemporaneo.
+            
+            L'opera diventa così un dispositivo critico capace di mettere in discussione poteri, sistemi economici e i modelli culturali dominanti.</analisi>
+        <lingua id="it">Italiano</lingua>
+        <parole-chiave>
+        	<soggetto>Arte Povera</soggetto>
+        	<soggetto>Installazione</soggetto>
+            <soggetto>Critica istituzionale</soggetto>
+            <soggetto>Michelangelo Pistoletto</soggetto>
+        </parole-chiave>
+        <descrizione>Opera del 1967; elemento cardine dell'Arte Povera; 
+            parte delle collezioni MADRE, Napoli. Bibliografia: Celant, "Arte Povera"; Bonito Oliva; Foster, "Return of the Real".</descrizione>
+        <identificativo tipo="URI">ota:venere-degli-stracci-pistoletto-1967</identificativo>
+	</opera>
+</catalogo>

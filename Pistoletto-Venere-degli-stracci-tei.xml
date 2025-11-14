@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="it">
+
+  <teiHeader>
+    <fileDesc>
+
+      <titleStmt>
+        <title>Venere degli stracci – Michelangelo Pistoletto (1967)</title>
+        <author>Michelangelo Pistoletto</author>
+        <respStmt>
+          <resp>Codifica TEI e descrizione critica</resp>
+          <name>Francesca Brevini</name>
+        </respStmt>
+      </titleStmt>
+
+      <publicationStmt>
+        <publisher>MADRE – Museo d’Arte Contemporanea Donnaregina</publisher>
+        <pubPlace>Napoli</pubPlace>
+        <date when="1967">1967</date>
+        <availability>
+          <licence>Uso didattico – i diritti appartengono al MADRE di Napoli</licence>
+        </availability>
+      </publicationStmt>
+
+      <sourceDesc>
+        <bibl>
+          <title>Venere degli stracci</title>
+          <author>Michelangelo Pistoletto</author>
+          <ref target="https://www.madrenapoli.it/collezione/michelangelo-pistoletto/">
+            Archiviazione digitale opera nel sito di MADRE
+          </ref>
+        </bibl>
+      </sourceDesc>
+
+    </fileDesc>
+
+    <profileDesc>
+      <langUsage>
+        <language ident="it">Italiano</language>
+      </langUsage>
+
+      <textClass>
+        <keywords scheme="temi">
+          <term>Arte Povera</term>
+          <term>Installazione</term>
+          <term>Critica istituzionale</term>
+          <term>Michelangelo Pistoletto</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+
+  </teiHeader>
+
+
+  <text>
+    <body>
+
+      <head>Descrizione critica dell’opera</head>
+
+      <p>
+        La <hi rend="italic">Venere degli stracci</hi> presenta l'accostamento tra una statua classica, emblema della bellezza idealizzata e della tradizione occidentale, e un mucchio di stracci logori. La compresenza di questi due poli genera 
+        uno scontro visivo e simbolico: ordine e caos, ideale e residuo, memoria e consumo.
+      </p>
+
+      <p>
+        Nella prospettiva warburghiana, il contrasto attiva una <hi>pathosformel</hi>: la forma antica sopravvive nella modernità ma è trasformata dalla carica emotiva della materia povera. La Venere, solitamente posta su un piedistallo, è qui immersa nella condizione materiale del presente, accerchiata da ciò che solitamente rimane invisibile o semplicemente non considerato.
+      </p>
+
+      <p>
+        In chiave situazionista, l’opera realizza un <hi>détournement</hi>. L’immagine classica perde la sua aura e viene ri-orientata verso una critica del sistema capitalistico e della sua sovrapproduzione. Gli stracci diventano traccia di una collettività fatta di lavoro, consumo e precariarietà, 
+        mentre la Venere diviene presenza di crisi perdendo l'aurea 
+        contemplativa.
+      </p>
+
+      <p>
+        L’installazione diventa così uno spazio di soglia, una zona in cui la gerarchia tra arte e vita viene sospesa. È un luogo di collisione simbolica che apre alla possibilità di una lettura politica dell’immagine e del suo potere.
+      </p>
+
+
+      <head>Materiali e collocazione</head>
+
+      <list>
+        <item>Materiali: statua in gesso; cumulo di stracci</item>
+        <item>Luogo: MADRE – Museo d’Arte Contemporanea Donnaregina, Napoli</item>
+        <item>Dimensioni: Venere, 51 3/16 x 15 3/4 x 17 11/16 pollici; installazione, 59 1/16 x 110 1/4 x 39 3/8 pollici. </item>
+      </list>
+
+
+      <head>Bibliografia</head>
+
+      <listBibl>
+        <bibl>Celant, Germano. <title>Arte Povera</title>, 1967.</bibl>
+        <bibl>Bonito Oliva, Achille. <title>L’arte oltre il pensiero</title></bibl>
+        <bibl>Foster, Hal. <title>The Return of the Real</title>MIT Press.</bibl>
+      </listBibl>
+
+    </body>
+  </text>
+
+</TEI>

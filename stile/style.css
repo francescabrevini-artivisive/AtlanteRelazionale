@@ -1,0 +1,377 @@
+body { 
+ background-image: url("../img/sfondo storie.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  margin: 0;
+  font-family: "polymath", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Titolo a tutta pagina home*/
+.titolo-tutta-pagina {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+  text-align: center;
+}
+
+.titolo-tutta-pagina h1 {
+  font-size: 6vw;
+  font-family: "ibm-plex-sans-condesed", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0;
+  color: #1A1A1A; 
+}
+
+/* modalità-esplorazione*/
+.modalita-esplorazione {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 100px;
+  text-align: justify;
+  margin: 10vw;
+ 
+}
+
+
+/* Bottoni */
+.bottone-chiaro {
+  display: flex;
+  background: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 9999px ;
+  padding: 8px 13px;
+  /* larghezza automatica */
+  width: auto; 
+  /* impedisce al testo di andare a capo */            
+  white-space: nowrap;     
+  color: #1A1A1A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin-bottom: 10px; 
+ }
+
+.bottone-chiaro:hover {
+  background: yellowgreen;
+  color: black;
+  }
+
+.descrizione-bottoni{
+  display: flex;              
+  justify-content: space-between; 
+  max-width: 700px;           
+  margin: 0 auto;           
+  gap: 20px;      
+}
+
+.torna:hover {
+  background: yellowgreen;
+  color: black;
+}
+nav { 
+  margin: auto;
+  text-align: right;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: #BFBFBF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+  border-left: 1px solid #bbb;
+}
+
+li a:hover:not(.pagina-attiva) {
+  background-color: #BFBFBF;
+}
+
+.pagina-attiva {
+  background-color: yellowgreen;
+}
+
+header { 
+  margin: auto;
+}
+
+h1 {
+  font-family: "polymath", sans-serif;
+  margin: auto;
+  font-style: normal; 
+  font-size: 1,6rem;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+h2 {
+  font-family: "polymath", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding-left: 8px;
+  border-left: 4px solid #1A1A1A;
+  color: #1A1A1A;
+}
+/* --- Layout griglia .progetto --- */
+.progetto {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  background: yellowgreen;
+  border-radius: 16px;
+  box-shadow: 0 24px 24px rgba(0,0,0,0.06);
+  text-align: justify;
+}
+
+.filtri {
+  float: left;
+  border-right: 1px solid #bbb;
+  grid-column: 1 / 2;
+  padding-right: 16px;
+}
+
+
+.crediti {
+  display: center;
+  background-color: yellowgreen ;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 4px 2px;
+}
+
+.hover-in-text a:hover {
+  background-color: yellowgreen;
+  border-radius: 16px;
+  padding: 5px;
+  color: black;
+}
+
+.crea a {
+  margin: 2px;
+}
+
+.intestazioni {
+  padding: auto-fit;
+  text-align: justify;
+  display: grid;
+  margin: 10vw;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15vw;     
+}
+
+.filtri {
+  padding: 40px;
+  display: grid;
+  gap: 20px;
+  padding-top: -40px;
+}
+
+footer {
+  text-align: center;
+  background-color: yellowgreen;
+  padding: 3px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.atlante {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.mappa {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  text-align: justify;
+}
+
+.container-mappa {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+ 
+}
+
+#map {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.filtri-mappa {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 1px 1px 16px 1px;
+  flex-wrap: wrap;
+}
+
+.filtri-mappa span {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.filter-btn {
+  border: 1px solid #aaa;
+  color: #1a1a1a;
+  border-radius: 4px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: yellowgreen;
+}
+
+.elenco-item {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* per pagina catalogo*/
+
+
+.categoria {
+    margin-bottom: 3rem;
+}
+
+.categoria h2 {
+    border-left: 5px solid #222;
+    font-size: 1.5rem;
+    text-align: justify;
+    display: grid;
+    margin: 10vw;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15vw; 
+}
+/* --- GRIGLIA responsive --- */
+
+.grid {
+     display: grid;
+     margin: 10vw;
+     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+     gap: 40px;
+     padding: auto;
+}
+
+/* --- CARD per item--- */
+
+.item-card {
+  background: white;
+  padding: 1rem;
+  margin: auto-fit;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item-card h3 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.item-card p {
+    margin: auto-fit;
+    color: #444;
+    font-size: 0.9rem;
+}
+/* Immagini del catalogo */
+.item-card img.item-img {
+    width: 100%;
+    height: 180px;       /* per alzare o abbassare */
+    object-fit: cover;   /* taglia l'immagine senza deformarla */
+    border-radius: 10px; /* angoli morbidi */
+    display: block;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+/*pagina item analizzato*/
+
+.item-page {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+.item-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.item-sezioni {
+    margin-bottom: 2.5rem;
+}
+
+.item-sezioni h2{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    padding-left: 8px;
+    border-left: 3px solid #222;
+}
+.metadata-list {
+  list-style: none;
+  padding: 0;
+}
+
+.metadata-list li {
+  margin-bottom: 0.5rem;
+}
+
+/*pagina standard*/
+.centrato {
+    margin-bottom: 2.5rem;
+    padding: auto-fit;
+    text-align: justify;
+    display: grid;
+    margin: 10vw;
+}

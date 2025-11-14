@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it"> 
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="stile/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Francesca Brevini">
+    <title>Costellazioni | Atlante Relazionale</title>
+    <link rel="stylesheet" href="https://use.typekit.net/xhx7ggb.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+       <!-- Leaflet CSS -->
+    <style>
+    /* Imposta altezza e larghezza mappa */
+    #map { height: 500px; width: 100%; }
+    </style>
+  </head>
+  <body>
+    <nav class="menu" role="navigation" aria-label="Menu principale">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogo.html">Catalogo</a></li>
+        <li><a href="atlante.html" class="pagina-attiva">Costellazioni</a></li>
+        <li><a href="atlante.html">Manifesto</a></li>  
+        <li><a href="atlante.html">Crea la tua deriva</a></li>
+        <li><a href="standard.html">Struttura e standard</a></li>
+      </ul>
+    </nav>
+    <header class="intestazioni">
+      <div>
+      <h1><strong>Costellazioni</strong> </h1>
+      <p>Ogni nodo è una soglia.</p>
+      </div>
+    </header>
+    <main id="maincontent">
+    <!-- Contenitore mappa -->
+    <div id="map" style="height: 500px; margin: 20px 0; border-radius:8px;border:1px solid #ccc;" ></div>
+      <section class="container-mappa">
+        <!--(LeafletJS)-->
+        <h2>Mappa relazionale</h2>
+        <p>Clicca sui nodi per aprire la scheda dell’opera. Ogni nodo rappresenta un’opera che puoi approfondire.</p>
+            <!-- Sezione filtri -->
+        <section id="filter-mappa">
+          <h3>Filtra per categoria</h3>
+        <div class="filters">
+           <button class="filter-btn active" data-filter="all">Tutti</button>
+           <button class="filter-btn" data-filter="categoria1">Scultura</button>
+           <button class="filter-btn" data-filter="categoria2">Pittura</button>
+           <button class="filter-btn" data-filter="categoria3">Istallazioni</button>
+        </div>
+      </section>
+
+      <!-- Elenco filtri -->
+        <section id="elenco-item">
+        <div class="item" data-category="categoria1">Forme uniche della continuità nello spazio - Boccioni, Umberto</div>
+        <div class="item" data-category="categoria2">Il Quarto Stato  - Pellizza da Volpedo, Giuseppe</div>
+        <div class="item" data-category="categoria3">Venere degli stracci - Pistoletto, Michelangelo</div>
+       <!-- puoi aggiungerne quanti vuoi-->
+        </section>
+
+      </main>
+
+      <section>
+         <div class="crediti">
+         <p><a href="#">Crediti</a> | <a href="#">Licenze</a></p>
+         </div>
+      </section>
+
+      <footer>
+      <p>&copy; Copyright Francesca Brevini, 2025 - Progetto sviluppato per la prova finale del corso di Digital Humanities e Patrimonio Culturale </p>
+      </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+    // Inizializza la mappa nel div #map con vista su Roma
+    var map = L.map('map').setView([41.9028, 12.4964], 6);
+
+    // layer mappa base
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '©OpenStreetMap'
+    }).addTo(map);
+
+    // marker di apertura map + popup nome
+    L.marker([41.9028, 12.4964]).addTo(map)
+    .bindPopup('Roma')
+    .openPopup();
+
+    // Aggiungi altri marker/nodi qui
+
+    //pulsanti filtri 
+    const filters = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.item');
+
+    filters.forEach(button => {
+      button.addEventListener('click', () => {
+      // Rimuovi active da tutti
+      filters.forEach(btn => btn.classList.remove('active'));
+      // Imposta active al pulsante cliccato
+      button.classList.add('active');
+
+      const filter = button.getAttribute('data-filter');
+
+      items.forEach(item => {
+        const categories = item.getAttribute('data-category').split(' ');
+
+        if (filter === 'all') {
+          // Mostra tutti
+          item.style.display = 'block';
+        } else {
+          // Mostra solo se categoria presente
+          if (categories.includes(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+         }
+       });
+      });
+     });
+    
+  </script>
+</body>
+</html>

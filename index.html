@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--Codice di lingua iso-->
+<html lang="it">
+    <!--Elemento head è il contenitore per i metadati-->
+    <head>
+        <!--Set per visualizzazione dei caratteri-->
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="stile/style.css">
+        <!--Area visibele all'utente, ridimensionamento in base al dispositivo-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atlante Relazionale</title>
+        <!--font usati, licenze adobe-->
+        <link rel="stylesheet" href="https://use.typekit.net/xhx7ggb.css">
+        <!--Dublin Core metadati-->
+        <meta name="DC.Title" content="Atlante Relazionale">
+        <meta name="DC.Creator" content="Francesca Brevini">
+        <meta name="DC.Subject" content="Arte contemporanea, Psicogeografia, Archivio, Atlante visivo">
+        <meta name="DC.Description" content="Atlante digitale per esplorare derive psicogeografiche nell’arte contemporanea.">
+        <meta name="DC.Date" content="2025">
+        <meta name="DC.Type" content="Sito web">
+        <meta name="DC.Format" content="html"> 
+        <!--ricordare di inserire-->
+        <meta name="DC.Identifier" content="TBD una volta che il sito sia caricato">
+        <meta name="DC.language" content="it">
+        <meta name="DC.Rights" content="Accesso libero creative commons">
+    </head>
+    <body>
+       <!--Elemento Nav per il menu di navigazione -->
+        <nav class="menu" role="navigation" aria-label="Menu principale">
+            <ul>
+                <li><a href="index.jsp" class="pagina-attiva">Home</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="atlante.html">Costellazioni</a></li>
+                <li><a href="index.html">Manifesto</a></li>          
+                <li><a href="index.html">Crea la tua deriva</a></li>
+                <li><a href="standard.html">Struttura e standard</a></li>
+            </ul>
+        </nav>
+        <!--Elemento header della pagina -->
+        <header class="titolo-tutta-pagina" id="top">
+            <h1><strong>Atlante Relazionale</strong></h1>
+            <p>Spazio di attivazione, attraversamento e memoria.</p>
+        </header>
+
+      
+        <!--Elemento Section per le sezioni della pagina-->
+        <main id="maincontent" >
+            <section class="progetto"> 
+                <h2>Il progetto</h2>
+                <p>L’<strong>Atlante Relazionale</strong> si propone come <em>archivio digitale non lineare</em>, un dispositivo critico ispirato all’<strong>Atlante Mnemosyne</strong> di Aby Warburg e alla <strong>psicogeografia dell'IS</strong>. Il progetto si pone l'obbiettivo di trasformare lo studio e l'osservazione in un territorio da esplorare, in cui perdersi per trovare. Una <strong>mappa affettiva e relazionale</strong>: un sistema aperto dove ogni nodo (opera, traccia) è un punto di attivazione per nuove connessioni.</p><p> L'<strong>Atlante Relazionale</strong> è un progetto del <a href="https://centri.unibo.it/dharc/en" target="_blank" title="Apre il sito del centro di ricerca DH.arc in una nuova finestra">DH.arc</a> dell'Università di Bologna</p>  
+            <!-- Modalità di esplorazione -->      
+            </section>
+            <section class="intestazioni">
+                <article class="crea">
+                   <h2>UN ATLANTE DA ATTRAVERSARE</h2>
+                   <p>L’Atlante Relazionale non vuole essere soltanto luogo di conservazione ma uno <strong>strumento di attivazione culturale:</strong> per questo motivo vi sono diverse modalità di esplorazione.</p>
+                   <p>Questo progetto nasce per essere una piattaforma critica aperta, che cresce e si trasforma.</p>
+                </article>
+            
+                <!-- per OPERA Random in js-->
+                <article id="opera-random" class="opera-random">
+                    <h2>OPERA RANDOM</h2>
+                    <div id="operaCasuale"></div>
+                </article>
+            </section>
+
+            <section class="modalita-esplorazione">
+                <article class="deriva">
+                    <a href="index.html" class="bottone-chiaro"><strong>Crea la tua deriva</strong></a>
+                    <p class="descrizione-bottoni">Scegli nodi, intreccia significati, crea nuovi percorsi, nuove geografie affettive digitali. 
+                    </p>
+                </article class>
+                <article class="costellazioni">
+                    <a href="atlante.html" class="bottone-chiaro"><strong>Costellazioni</strong></a><p class="descrizione-bottoni">derive già tracciate, percorsi esempio da cui partire.</p>
+                </article> 
+                <article class="catalogo">
+                    <a href="catalogo.html" class="bottone-chiaro"><strong>Catalogo</strong></a><p class="descrizione-bottoni">Tutte le opere archiviate nell'Atlante.</p>
+                </article> 
+            </section>
+
+            <!--pulsante Torna Su-->
+            <div>
+            <button class="torna"><a href="#top">Torna su</a></button>
+            </div>
+            <div class="crediti">
+                <p><a href="#"><strong>Crediti</strong></a>  |  <a href="#" ><strong>Licenze</strong></a></p>
+            </div>
+        </main>
+
+        <!--Elemento footer per il piede della pagina -->
+        <footer>
+            <p>&copy; Copyright Francesca Brevini, 2025 - Progetto sviluppato per la prova finale del corso di Digital Humanities e Patrimonio Culturale </p>
+        </footer>
+        <script>
+          /* -------------------------------------------------------
+           ARRAY DI OGGETTI (JS Objects + JS Arrays)
+           Ogni oggetto rappresenta un'opera.
+           ------------------------------------------------------- */
+           const opere = [
+              {
+                  titolo: "Venere degli stracci - Michelangelo Pistoletto",
+                  link: "Venere-Pistoletto.html",
+                  img: "img/Pistoletto-Venere-degli-stracci.jpg"
+               },
+               {
+                  titolo: "Forme uniche della continuità nello spazio - Umberto Boccioni",
+                  link: "catalogo.html",
+                  img: "img/Boccioni-Forme-Uniche-1913.jpg"
+               },
+                {
+                  titolo: "Il Quarto Stato - Giuseppe Pelizza Da Volpedo",
+                  link: "catalogo.html",
+                  img: "img/quarto_stato.jpg"
+                },
+                {
+                  titolo: "Concetto spaziale - Lucio Fontana",
+                  link: "catalogo.html",
+                  img: "img/concetto-spaziale-fontana.jpg"
+                },
+                {
+                  titolo: "Grande Cretto di Gibellina - Alberto Burri",
+                  link: "catalogo.html",
+                  img: "img/Cretto-di-Burri-Gibellina.jpg"
+                },
+                {
+                  titolo: "Igloo (La tenda di Gheddafi) - Mario Merz",
+                  link: "catalogo.html",
+                  img: "img/Igloo-merz.jpg"
+                },
+                {
+                  titolo: "Mappa - Alighiero Boetti",
+                  link: "catalogo.html",
+                  img: "img/boetti-mappa.jpg"
+                },
+                {
+                  titolo: "Presente e passato - Giorgio De Chirico",
+                  link: "Presente-e-passato-DeChirico.html",
+                  img: "img/de-chirico-presente-e-passato.jpg"
+                },
+               {
+                   titolo: "Scultura n.15 -Fausto Melotti",
+                   link: "catalogo.html",
+                   img: "img/Melotti-scultura-n15.jpg"
+                },
+                {
+                   titolo: "Senza Titolo - Maurizio Cattelan",
+                   link: "catalogo.html",
+                   img: "img/Cattelan-senza-titolo.jpg"
+                }
+ 
+           ];
+            /* -------------------------------------------------------
+            FUNZIONE PER SCEGLIERE UN ELEMENTO CASUALE
+            ( Math.random() + Math.floor())
+            ------------------------------------------------------- */
+            function mostraOperaCasuale() {
+
+               // recupero del contenitore HTML dove inserire il risultato
+               const box = document.getElementById("operaCasuale");
+
+               // se l'array è vuoto → messaggio "placeholder"
+               if (opere.length === 0) {
+                   box.innerHTML = "<p>Nessuna opera presente. Aggiungi le opere nel codice.</p>";
+                   return;
+            }
+
+                // genera un numero casuale tra 0 e opere.length-1
+               const indiceCasuale = Math.floor(Math.random() * opere.length);
+
+               // prendo l'opera corrispondente nell'array
+               const opera = opere[indiceCasuale];
+               
+                // Costruisco l'HTML con stringhe base (stile W3Schools)
+                var html = "";
+                html += "<a href=\"" + opera.link + "\">";
+                html +=   "<img src=\"" + opera.img + "\" alt=\"" + opera.titolo + "\" width=\"300\">";
+                html += "</a>";
+                html += "<p><a href=\"" + opera.link + "\"><strong>" + opera.titolo + "</strong></a></p>";
+
+                box.innerHTML = html;
+            }
+
+        
+
+
+          /* -------------------------------------------------------
+          Fa eseguire la funzione quando la pagina carica
+          ------------------------------------------------------- */
+          document.addEventListener("DOMContentLoaded", mostraOperaCasuale);
+       </script>
+
+    </body>
+</html>

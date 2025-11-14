@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Struttura e Standard | Atlante Relazionale</title>
+    <link rel="stylesheet" href="stile/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav class="menu" role="navigation" aria-label="Menu principale">>
+      <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="catalogo.html">Catalogo</a></li>
+       <li><a href="atlante.html">Costellazioni</a></li>
+       <li><a href="standard.html">Manifesto</a></li>
+       <li><a href="standard.html">Crea la tua deriva</a></li>
+       <li><a href="standard.html" class="pagina-attiva">Struttura e standard</a></li>
+     </ul>
+    </nav>
+
+    <header class="intestazioni">
+      <h1><strong>Struttura e standard</strong></h1>
+    </header>
+    <main id="standard"> 
+      <section class="centrato"> <p>Pagina in allestimento.</p>
+       <p>Prossimamente qui troverai...</p>
+       <p>Modelli, criteri e scelte che guidano l’Atlante Relazionale.</p>
+        <h2>1. Standard utilizzati</h2>
+        <p>L’Atlante adotta un modello ibrido che combina tre livelli descrittivi:</p>
+
+        <ul>
+          <li><strong>Dublin Core (DC)</strong> – utilizzato nei metadati HTML delle pagine e in un file XML dedicato. Garantisce interoperabilità e semplicità.</li>
+          <li><strong>XML personalizzato</strong> – un modello personalizzato per la descrizione strutturata degli item dell’Atlante. Permette campi specifici.</li>
+          <li><strong>TEI</strong> – usato per il full-text e la contestualizzazione critica dell’opera. Consente un livello avanzato di markup per testo, bibliografia e fenomeni culturali.</li>
+        </ul>
+
+        <h2>2. Metadati e vocabolari controllati</h2>
+        <p>Gli item includono collegamenti a sistemi di autorità e risorse affidabili:</p>
+        <ul>
+          <li><strong>VIAF</strong> per identificare autori e figure rilevanti;</li>
+          <li><strong>URI di musei, collezioni e istituzioni</strong> per garantire riferimenti verificabili;</li>
+          <li><strong>parole chiave tematiche</strong> allineate a categorie usate in ambito DH e storia dell’arte.</li>
+        </ul>
+        <h2>3. Componenti tecniche utilizzate</h2>
+        <p>La realizzazione utilizza diversi componenti JS e HTML5 (derivati da W3Schools / modelli base):</p>
+        <ul>
+          <li>funzione JS per la selezione casuale dell’opera;</li>
+          <li>filtri dinamici via JavaScript per il catalogo;</li>
+          <li>integrazione del tool <strong>Leaflet</strong> per la mappa;</li>
+          <li>layout responsive con CSS grid/flexbox;</li>
+          <li>esportazione JSON (funzione JS).</li>
+        </ul>
+
+     </section>
+
+
+      <div class="crediti">
+      <p><a href="#"><strong>Crediti</strong></a>  |  <a href="#" ><strong>Licenze</strong></a></p>
+      </div>
+    </main>
+  <footer>
+    <p>&copy; 2025 Francesca Brevini - Prova finale Digital Humanities e Patrimonio Culturale</p>
+  </footer>
+</body>
+</html>

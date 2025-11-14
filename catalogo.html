@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--Codice di lingua iso-->
+<html lang="it">
+    <!--Elemento head è il contenitore per i metadati-->
+    <head>
+        <!--Set per visualizzazione dei caratteri-->
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="stile/style.css">
+        <!--Area visibele all'utente, ridimensionamento in base al dispositivo-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catalogo | Atlante Relazionale</title>
+        <!--font usati, licenze adobe-->
+        <link rel="stylesheet" href="https://use.typekit.net/xhx7ggb.css">
+        <!--Dublin Core metadati-->
+        <meta name="DC.Title" content="Atlante Relazionale">
+        <meta name="DC.Creator" content="Francesca Brevini">
+        <meta name="DC.Subject" content="Arte contemporanea, Psicogeografia, Archivio, Atlante visivo">
+        <meta name="DC.Description" content="Atlante digitale per esplorare derive psicogeografiche nell’arte contemporanea.">
+        <meta name="DC.Date" content="2025">
+        <meta name="DC.Type" content="Sito web">
+        <meta name="DC.Format" content="html"> 
+        <!--ricordare di inserire-->
+        <meta name="DC.Identifier" content="TBD una volta che il sito sia caricato">
+        <meta name="DC.language" content="it">
+        <meta name="DC.Rights" content="Accesso libero creative commons">
+    </head>
+    <body>
+      <nav class="menu" role="navigation" aria-label="Menu principale">
+        <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="catalogo.html" class="pagina-attiva">Catalogo</a></li>
+           <li><a href="atlante.html">Costellazioni</a></li>
+           <li><a href="catalogo.html">Manifesto</a></li>
+           <li><a href="catalogo.html">Crea la tua deriva</a></li>
+           <li><a href="standard.html">Struttura e standard</a></li>
+        </ul>
+      </nav>
+    <header class="intestazioni">
+        <div>
+            <h1><strong>Catalogo dell'Atlante</strong></h1>
+            <p>Raccolta di tutte le opere archiviate</p>
+        </div>
+    </header>
+        <section id="filtri-mappa" class="centrato">
+          <h3>Filtra per categoria</h3>
+        <div class="filters">
+           <a href="catalogo.html?categoria=all"><button class="filter-btn">Tutti</button></a>
+           <a href="catalogo.html?categoria=scultura"><button class="filter-btn">Scultura</button></a>
+           <a href="catalogo.html?categoria=pittura"><button class="filter-btn">Pittura</button></a>
+           <a href="catalogo.html?categoria=installazioni"><button class="filter-btn">Istallazioni</button><a>
+        </div>
+       </section>
+       <section>
+        <div class="grid" >
+            <article class="item-card" data-category="installazioni">
+                <img src="img/Pistoletto-Venere-degli-stracci.jpg" alt="Venere degli stracci" class="item-img">
+                  <h3><a href="Venere-Pistoletto.html">Venere degli stracci</a></h3>
+                  <p>Autore:<a href="http://viaf.org/viaf/95877603" target="_blank"> Pistoletto, Michelangelo</a></p>
+                  <p>Anno: 1967</p>
+                  <p>Tipologia: Installazione (statua in gesso+ stracci)</p>
+                  <p>Collocazione:<a href="https://www.madrenapoli.it/collezione/michelangelo-pistoletto" target="_blank">MADRE, Napoli</a></p>
+            </article>
+
+            <article class="item-card" data-category="scultura">
+                <img src="img/Boccioni-Forme-Uniche-1913.jpg" alt="Forme uniche della continuità nello spazio" class="item-img">
+                <h3><a href="Boccioni-forme-uniche.html">Forme uniche della continuità nello spazio</a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/51685971" target="_blank">Boccioni, Umberto</a></p>
+                <p>Anno: 1913</p>
+                <p>Tipologia: Scultura (Bronzo)</p>
+                <p>Collocazione:<a href="https://www.lombardiabeniculturali.it/opere-arte/schede/5i180-01405" target="_blank"> Collezione Museo del Novecento, Milano</a></p>
+            </article>
+
+            <article class="item-card" data-category="pittura">
+                <img src="img/quarto_stato.jpg" alt="Il Quarto Stato" class="item-img">
+                <h3><a href="Quarto-Stato-Volpedo.html">Il Quarto Stato </a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/54959842" target="_blank"> Pellizza da Volpedo, Giuseppe</a></p>
+                <p>Anno: 1898 - 1902</p>
+                <p>Tipologia: Pittura (tela / pittura a olio)</p>
+                <p>Collocazione:<a href="https://www.lombardiabeniculturali.it/opere-arte/schede/5i180-02498" target="_blank"> Collezione Museo del Novecento, Milano</a></p>
+            </article>
+            <article class="item-card">
+                <img src="img/concetto-spaziale-fontana.jpg" alt="Concetto Spaziale" class="item-img">
+                <h3><a href="Concetto-Spaziale-Fontana.html">Concetto spaziale</a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/29590895" target="_blank">Fontana, Lucio</a></p>
+                <p>Anno: 1949</p>
+                <p>Tipologia: Carta Intelata Naturale Bianca Con Buchi</p>
+                <p>Collocazione: <a href="https://gnamc.cultura.gov.it" target="_blank">Galleria Nazionale, Roma</a></p>
+            </article>
+            <article class="item-card" data-category="installazioni">
+                <img src="img/Cretto-di-Burri-Gibellina.jpg" alt="Grande Cretto" class="item-img">
+                <h3><a href="Grande-Cretto-Burri.html">Grande Cretto di Gibellina</a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/71412837" target="_blank">Burri, Alberto</a></p>
+                <p>Anno: 1984 – 1989</p>
+                <p>Tipologia: Land art / scultura ambientale</p>
+                <p>Collocazione: <a href="https://www.museionline.info/tipologie-museo/il-grande-cretto" target="_blank">Gibellina Vecchia, Trapani</a></p>
+            </article>
+            <article class="item-card" data-category="installazioni">
+                <img src="img/Igloo-merz.jpg" alt="Igloo" class="item-img">
+                <h3><a href="Igloo-Merz.html">Igloo (La tenda di Gheddafi)</a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/84035893" target="_blank">Merz, Mario</a></p>
+                <p>Anno: 1968/1981</p>
+                <p>Tipologia: Installazione (tubolare in ferro, acrilico su tela di juta)</p>
+                <p>Collocazione: <a href="https://www.castellodirivoli.org/opera/igloo-tenda-di-gheddafi/" target="_blank">Castello di Rivoli, Torino</a></p>
+                <p><em>@crediti foto: Castello di rivoli</em>
+                </p>
+            </article>
+            <article class="item-card">
+                <img src="img/boetti-mappa.jpg" alt="Mappa di Boetti" class="item-img">
+                <h3><a href="Mappa-Boetti.html">Mappa</a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/115638612"target="_blank"> Boetti, Alighiero</a></p>
+                <p>Anno: 1971 – 1973</p>
+                <p>Tipologia: Arazzo (ricamo a mano su lino) </p>
+                <p>Collocazione: <a href="https://www.maxxi.art" target="_blank">MAXXI, Roma</a></p>
+            </article>
+            <article class="item-card" data-category="pittura">
+               <img src="img/de-chirico-presente-e-passato.jpg" alt="Presente e passato"  class="item-img">
+                <h3><a href="Presente-e-passato-DeChirico.html">Presente e passato</a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/104172730" target="_blank">De Chirico, Giorgio</a></p>
+                <p>Anno: 1936</p>
+                <p>Tipologia: Pittura</p>
+                <p>Collocazione: <a href="https://lagallerianazionale.com/" target="_blank">Galleria Nazionale d’Arte Moderna e Contemporanea, Roma</a></p>
+            </article>
+             <article class="item-card" data-category="scultura">
+               <img src="img/Melotti-scultura-n15.jpg" alt="Melotti scultura n15"  class="item-img">
+                <h3><a href="Scultura-n15.html">Scultura n.15</a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/44328215" target="_blank">Melotti, Fausto</a></p>
+                <p>Anno: 1934-35 e 1968</p>
+                <p>Tipologia: Scultura (gesso)</p>
+                <p>Collocazione: <a href="https://www.lombardiabeniculturali.it/opere-arte/schede/5i180-01542/" target="_blank">Collezzione Museo del Novecento, Milano.</a></p>
+            </article>
+             <article class="item-card" data-category="installazioni">
+               <img src="img/Cattelan-senza-titolo.jpg" alt="Presente e passato"  class="item-img">
+                <h3><a href="Cattelan-senza-titolo.html">Senza Titolo</a></h3>
+                <p>Autore: <a href="http://viaf.org/viaf/117976965" target="_blank">Cattelan, Maurizio</a></p>
+                <p>Anno: 1998</p>
+                <p>Tipologia: Installazione (ulivo, terra, struttura in legno e metallo)</p>
+                <p>Collocazione: <a href="https://www.castellodirivoli.org/opera/senza-titolo-cattelan-1998/" target="_blank">Castello di Rivoli, Torino.</a></p>
+                <p><em>@crediti foto: Castello di rivoli</em>
+                </p>
+            </article>
+            </section>
+        
+            <!--pulsante Torna Su-->
+            <div>
+            <button class="torna"><a href="#top">Torna su</a></button>
+            </div>
+            <div class="crediti">
+                <p><a href="#"><strong>Crediti</strong></a>  |  <a href="#" ><strong>Licenze</strong></a></p>
+            </div>
+
+        </main>
+
+        <!--Elemento footer per il piede della pagina -->
+        <footer>
+            <p>&copy; Copyright Francesca Brevini, 2025 - Progetto sviluppato per la prova finale del corso di Digital Humanities e Patrimonio Culturale </p>
+        </footer>
+    </body>
+    <script>
+     const params = new URLSearchParams(window.location.search);
+     const categoria = params.get('categoria');
+
+     if (categoria && categoria !== 'all') {
+     const items = document.querySelectorAll('.item-card');
+
+     items.forEach(item => {
+      if (item.dataset.category !== categoria) {
+        item.style.display = 'none';
+      }
+      });
+     }
+    </script>
+
+</html>
+
+          
