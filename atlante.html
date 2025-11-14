@@ -72,54 +72,90 @@
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-    // Inizializza la mappa nel div #map con vista su Roma
-    var map = L.map('map').setView([41.9028, 12.4964], 6);
+<script>
 
-    // layer mappa base
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '©OpenStreetMap'
-    }).addTo(map);
+// ===============================
+// OPERE SULLA MAPPA
+// ===============================
+const opereMappa = [ 
+  {
+    titolo: "Venere degli stracci",
+    link: "Venere-Pistoletto.html",
+    img: "img/Pistoletto-Venere-degli-stracci.jpg",
+    coord: [40.8518, 14.2681]
+  },
+  {
+    titolo: "Forme uniche della continuità nello spazio",
+    link: "Boccioni-forme-uniche.html",
+    img: "img/Boccioni-Forme-Uniche-1913.jpg",
+    coord: [45.4642, 9.1916]
+  },
+  {
+    titolo: "Il Quarto Stato",
+    link: "Quarto-Stato-Volpedo.html",
+    img: "img/quarto_stato.jpg",
+    coord: [45.4642, 9.1916]
+  },
+  {
+    titolo: "Concetto spaziale",
+    link: "Concetto-Spaziale-Fontana.html",
+    img: "img/concetto-spaziale-fontana.jpg",
+    coord: [41.9028, 12.4964]
+  },
+  {
+    titolo: "Grande Cretto di Gibellina",
+    link: "Grande-Cretto-Burri.html",
+    img: "img/Cretto-di-Burri-Gibellina.jpg",
+    coord: [37.8153, 12.9127]
+  }
+];
 
-    // marker di apertura map + popup nome
-    L.marker([41.9028, 12.4964]).addTo(map)
-    .bindPopup('Roma')
-    .openPopup();
 
-    // Aggiungi altri marker/nodi qui
+var map = L.map('map').setView([41.9028, 12.4964], 6);
 
-    //pulsanti filtri 
-    const filters = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.item');
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '©OpenStreetMap'
+}).addTo(map);
 
-    filters.forEach(button => {
-      button.addEventListener('click', () => {
-      // Rimuovi active da tutti
-      filters.forEach(btn => btn.classList.remove('active'));
-      // Imposta active al pulsante cliccato
-      button.classList.add('active');
+opereMappa.forEach(opera => {
+  L.marker(opera.coord)
+    .addTo(map)
+    .bindPopup(
+      '<div style="text-align:center;">' +
+      '<img src="' + opera.img + '" width="100" style="border-radius:6px;"><br>' +
+      '<strong>' + opera.titolo + '</strong><br>' +
+      '<a href="' + opera.link + '">Apri scheda</a>' +
+      '</div>'
+    );
+});
 
-      const filter = button.getAttribute('data-filter');
+const filters = document.querySelectorAll('.filter-btn');
+const items = document.querySelectorAll('.item');
 
-      items.forEach(item => {
-        const categories = item.getAttribute('data-category').split(' ');
+filters.forEach(button => {
+  button.addEventListener('click', () => {
 
-        if (filter === 'all') {
-          // Mostra tutti
-          item.style.display = 'block';
-        } else {
-          // Mostra solo se categoria presente
-          if (categories.includes(filter)) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-         }
-       });
-      });
-     });
+    filters.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const filter = button.getAttribute('data-filter');
+
+    items.forEach(item => {
+      const categories = item.getAttribute('data-category').split(' ');
+
+      if (filter === 'all' || categories.includes(filter)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+  });
+});
+
     
   </script>
 </body>
 </html>
+
